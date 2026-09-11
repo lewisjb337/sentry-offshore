@@ -1,0 +1,83 @@
+/* =========================================================
+   Sentry Offshore — Design tokens
+   Light professional theme
+   ========================================================= */
+
+:root {
+    color-scheme: light;
+
+    /* ---- Base surfaces ---- */
+    --bg-page: #F5F7F6;
+    --bg-panel: #FFFFFF;
+    --bg-panel-inset: #F0F3F2;
+    --bg-panel-hover: #F7F9F8;
+
+    /* ---- Text ---- */
+    --text-primary: #18221F;
+    --text-secondary: #5F6F69;
+    --text-muted: #87948F;
+    --text-data: #34433E;
+    --text-on-accent: #FFFFFF;
+
+    /* ---- Borders ---- */
+    --border: rgba(24, 34, 31, 0.09);
+    --border-strong: rgba(24, 34, 31, 0.18);
+
+    /* ---- Brand accent ---- */
+    --accent: #FF5A1F;
+    --accent-hover: #E64F19;
+    --accent-soft: rgba(255, 90, 31, 0.10);
+
+    /* ---- Semantic status ---- */
+    --color-success: #258A55;
+    --color-warning: #B67B22;
+    --color-error: #C94A4A;
+    --color-info: #268D85;
+
+    /* ---- Elevation / overlays ---- */
+    --shadow-panel: 0 1px 2px rgba(24, 34, 31, 0.035);
+    --shadow-modal: 0 24px 70px rgba(24, 34, 31, 0.16);
+    --overlay: rgba(24, 34, 31, 0.42);
+
+    /* ---- Typography ---- */
+    --font-display: 'Space Grotesk', 'IBM Plex Sans', sans-serif;
+    --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+
+    --fs-caption: 11px;
+    --fs-label: 13px;
+    --fs-body: 14px;
+    --fs-body-lg: 15px;
+    --fs-heading-sm: 17px;
+    --fs-heading-md: 26px;
+    --fs-heading-lg: 58px;
+    --fs-stat: 30px;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --lh-body: 1.6;
+    --lh-heading: 1.08;
+
+    /* ---- Spacing ---- */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 44px;
+    --space-8: 56px;
+    --space-9: 72px;
+    --space-10: 96px;
+
+    /* ---- Radius ---- */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* ---- Layout ---- */
+    --container: 1040px;
+}

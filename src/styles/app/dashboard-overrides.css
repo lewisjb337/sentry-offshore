@@ -1,0 +1,426 @@
+/* =========================================================
+DASHBOARD FILTERS
+   ========================================================= */
+
+.dashboard-panel__filters {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 10px;
+
+    margin-top: 14px;
+    padding: 12px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard-panel__filters--two {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-filter {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 140px;
+}
+
+.dashboard-filter > span {
+    color: var(--text-muted);
+
+    font-family:
+            "IBM Plex Mono",
+            monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.dashboard-filter select {
+    height: 34px;
+
+    padding:
+            0
+            30px
+            0
+            9px;
+
+    border:
+            1px solid
+            var(--border);
+
+    border-radius: 5px;
+
+    background:
+            var(--bg-panel-inset);
+
+    color:
+            var(--text-data);
+
+    font-family:
+            "IBM Plex Sans",
+            sans-serif;
+
+    font-size: 10px;
+
+    outline: none;
+}
+
+.dashboard-filter select:focus {
+    border-color:
+            rgba(
+                    255,
+                    90,
+                    31,
+                    0.5
+            );
+}
+
+
+/* =========================================================
+   DASHBOARD PAGINATION
+   ========================================================= */
+
+.dashboard-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    min-height: 48px;
+
+    margin-top: 4px;
+    padding-top: 10px;
+
+    border-top:
+            1px solid
+            var(--border);
+}
+
+.dashboard-pagination__meta {
+    color:
+            var(--text-muted);
+
+    font-family:
+            "IBM Plex Mono",
+            monospace;
+
+    font-size: 9px;
+}
+
+.dashboard-pagination__controls {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.dashboard-pagination__page {
+    min-width: 48px;
+
+    color:
+            var(--text-secondary);
+
+    font-family:
+            "IBM Plex Mono",
+            monospace;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+.dashboard-pagination .icon-btn:disabled {
+    opacity: 0.28;
+
+    cursor: not-allowed;
+}
+
+
+/* Keep the two dashboard panels visually stable */
+
+.dashboard-vessel-list {
+    min-height: 264px;
+}
+
+.dashboard-activity-list {
+    min-height: 356px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .dashboard-panel__filters--two {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-filter {
+        width: 100%;
+    }
+
+    .dashboard-filter select {
+        width: 100%;
+    }
+
+    .dashboard-vessel-list,
+    .dashboard-activity-list {
+        min-height: 0;
+    }
+}
+
+/* =========================================================
+   SIDEBAR LINKS
+   ========================================================= */
+
+.app-sidebar a {
+    text-decoration: none;
+}
+
+.app-sidebar a:hover,
+.app-sidebar a:focus,
+.app-sidebar a:visited {
+    text-decoration: none;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.7fr)
+        minmax(0, 1.3fr);
+
+    gap: 16px;
+    align-items: start;
+}
+
+.dashboard-vessel-row {
+    padding: 13px 0;
+}
+
+.dashboard-vessel-list {
+    min-height: 235px;
+}
+
+.dashboard-activity-row {
+    padding: 13px 0;
+}
+
+.dashboard-activity-row__heading {
+    gap: 16px;
+}
+
+.dashboard-activity-row__route {
+    gap: 9px;
+}
+
+.dashboard-activity-row__meta {
+    margin-top: 7px;
+}
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   DASHBOARD ATTENTION — COMPACT
+   ========================================================= */
+
+.dashboard-attention {
+    margin-top: 12px;
+}
+
+.dashboard-attention .dashboard-panel {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 16px;
+}
+
+.dashboard-attention-list {
+    min-height: 0;
+    height: auto;
+}
+
+.dashboard-attention-row {
+    min-height: 0;
+    padding: 14px 0 0;
+}
+
+.dashboard-attention-row:last-child {
+    padding-bottom: 0;
+}
+
+.dashboard-attention .dashboard-panel__heading {
+    margin-bottom: 0;
+}
+
+/* Prevent dashboard sections being stretched by inherited sizing */
+.dashboard-attention {
+    align-self: start;
+}
+
+.dashboard-grid {
+    margin-bottom: 0;
+}
+
+.dashboard-attention {
+    margin-top: 12px;
+}
+
+/* =========================================================
+   DASHBOARD GRID — FINAL ALIGNMENT
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    /* Match the 3-column summary grid above:
+       Fleet = 1 column
+       Movements = 2 columns
+    */
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 2fr);
+
+    gap: 16px;
+
+    align-items: stretch;
+
+    margin-bottom: 0;
+}
+
+
+/* Both main dashboard panels should finish at the same point */
+.dashboard-grid > .dashboard-panel {
+    height: 100%;
+}
+
+
+/* Fleet list fills the available card height cleanly */
+.dashboard-grid > .dashboard-panel:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-grid > .dashboard-panel:first-child .dashboard-vessel-list {
+    flex: 1;
+}
+
+
+/* Movement panel */
+.dashboard-grid > .dashboard-panel:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Keep pagination anchored at the bottom of either panel */
+.dashboard-grid .dashboard-pagination {
+    margin-top: auto;
+}
+
+
+/* Remove the old forced list heights */
+.dashboard-vessel-list,
+.dashboard-activity-list {
+    min-height: 0;
+}
+
+
+/* =========================================================
+   ATTENTION SECTION
+   ========================================================= */
+
+.dashboard-attention {
+    margin-top: 16px;
+
+    align-self: auto;
+}
+
+.dashboard-attention .dashboard-panel {
+    min-height: 0;
+    height: auto;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid > .dashboard-panel {
+        height: auto;
+    }
+}
+
+/* =========================================================
+   DASHBOARD GRID — EXACT COLUMN ALIGNMENT
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    /* Same underlying grid as the 3 summary cards */
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    align-items: stretch;
+}
+
+
+/* Fleet = exactly the same width as one summary card */
+.dashboard-grid > .dashboard-panel:first-child {
+    grid-column: span 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Recent activity = exactly two summary columns */
+.dashboard-grid > .dashboard-panel:last-child {
+    grid-column: span 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dashboard-grid .dashboard-pagination {
+    margin-top: auto;
+}
+
+
+.dashboard-vessel-list,
+.dashboard-activity-list {
+    min-height: 0;
+}
+
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid > .dashboard-panel:first-child,
+    .dashboard-grid > .dashboard-panel:last-child {
+        grid-column: auto;
+    }
+}

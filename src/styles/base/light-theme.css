@@ -1,0 +1,63 @@
+/* =========================================================
+   Sentry Offshore — Light theme refinements
+   ========================================================= */
+
+::selection {
+    background: rgba(255, 90, 31, 0.18);
+    color: var(--text-primary);
+}
+
+/* Native controls should match the light application palette. */
+select,
+input,
+textarea {
+    color-scheme: light;
+}
+
+/* Give the application chrome a quieter professional separation. */
+.app-sidebar {
+    background: #FBFCFC;
+}
+
+.app-topbar {
+    background: var(--bg-page);
+}
+
+/* Keep white surfaces distinct from the page without heavy shadows. */
+.dashboard-stat,
+.dashboard-panel,
+.entity-summary-card,
+.person-row,
+.vessel-card,
+.movement-row,
+.operation-card,
+.report-type-card,
+.report-preview,
+.report-card {
+    box-shadow: var(--shadow-panel);
+}
+
+/* More legible hover treatment on light surfaces. */
+.app-nav__item:hover,
+.multi-select-item:hover,
+.report-table tbody tr:hover {
+    background: var(--bg-panel-hover);
+}
+
+/* Inputs and selectors should read as form controls rather than dark wells. */
+.input,
+.entity-filter select,
+.dashboard-filter select {
+    background: #FFFFFF;
+}
+
+/* Modal/dialog surfaces stay clean and elevated. */
+.wizard-modal,
+.delete-modal,
+.report-builder {
+    box-shadow: var(--shadow-modal);
+}
+
+.modal-backdrop {
+    background: var(--overlay);
+}

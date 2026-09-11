@@ -1,0 +1,24 @@
+/* =========================================================
+   Sentry Offshore — stylesheet entry point
+   Import order intentionally follows the original cascade.
+   ========================================================= */
+
+@import './base/tokens.css';
+@import './base/reset-typography.css';
+
+@import './pages/landing.css';
+@import './pages/auth.css';
+
+@import './app/shell.css';
+@import './components/entity-crud.css';
+@import './app/entities.css';
+@import './app/entity-refinements.css';
+@import './app/operations.css';
+@import './app/reports.css';
+@import './app/settings.css';
+@import './app/dashboard.css';
+@import './components/filters-pagination.css';
+@import './app/dashboard-overrides.css';
+
+/* Theme */
+@import './base/light-theme.css';
