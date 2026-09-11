@@ -1,4 +1,4 @@
-﻿const required = (label) => (value) => {
+const required = (label) => (value) => {
     if (
         value === undefined ||
         value === null ||

@@ -1,4 +1,4 @@
-﻿function RadarGraphic() {
+function RadarGraphic() {
     const dots = [
         {
             cx: 205,

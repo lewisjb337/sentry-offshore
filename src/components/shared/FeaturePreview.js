@@ -1,4 +1,4 @@
-﻿function FeaturePreview({ label, rows }) {
+function FeaturePreview({ label, rows }) {
     const getToneClass = (tone) => {
         if (!tone) {
             return '';

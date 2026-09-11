@@ -1,4 +1,4 @@
-﻿export const differentiators = [
+export const differentiators = [
     {
         title: 'Live, not logged',
         detail:

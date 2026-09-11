@@ -1,4 +1,4 @@
-﻿import { useAppData } from '../../context/AppDataContext';
+import { useAppData } from '../../context/AppDataContext';
 import { entityDefinitions } from '../../data/entityDefinitions';
 
 function DeleteConfirmModal({

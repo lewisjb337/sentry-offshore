@@ -1,4 +1,4 @@
-﻿function safe(value) {
+function safe(value) {
     if (
         value === undefined ||
         value === null ||

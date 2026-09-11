@@ -1,4 +1,4 @@
-﻿function SectionLabel({ children }) {
+function SectionLabel({ children }) {
     return <p className="label">{children}</p>;
 }
 
