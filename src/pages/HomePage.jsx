@@ -1,4 +1,4 @@
-﻿import Header from '../components/Header';
+import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Differentiators from '../components/Differentiators';
 import Features from '../components/Features';

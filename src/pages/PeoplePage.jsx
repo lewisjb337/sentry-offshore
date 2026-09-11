@@ -1,4 +1,4 @@
-﻿import EntityPage from '../components/app/EntityPage';
+import EntityPage from '../components/app/EntityPage';
 
 function PeoplePage() {
     return (
