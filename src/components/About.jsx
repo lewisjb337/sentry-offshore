@@ -1,4 +1,4 @@
-﻿import SectionLabel from './shared/SectionLabel';
+import SectionLabel from './shared/SectionLabel';
 
 function About() {
     return (

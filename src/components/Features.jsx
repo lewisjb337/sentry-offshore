@@ -1,4 +1,4 @@
-﻿import { features } from '../data/landingPage';
+import { features } from '../data/landingPage';
 import FeaturePreview from './shared/FeaturePreview';
 import SectionLabel from './shared/SectionLabel';
 

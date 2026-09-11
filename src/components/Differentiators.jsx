@@ -1,4 +1,4 @@
-﻿import { differentiators } from '../data/landingPage';
+import { differentiators } from '../data/landingPage';
 import SectionLabel from './shared/SectionLabel';
 
 function Differentiators() {

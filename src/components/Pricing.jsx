@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { pricingTiers } from '../data/landingPage';
 import { useAuth } from '../context/AuthContext';
 import SectionLabel from './shared/SectionLabel';
